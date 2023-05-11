@@ -7,7 +7,7 @@ image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
 variables:
   ARTIFACT_NAME: nodejs-demo-app1.zip
   APP_NAME: nodejs-demo-app
-  ENV_DEV: Preproduction
+  ENV_DEV: Nodejs-demo-app-env
 
 Build:
   stage: Build
