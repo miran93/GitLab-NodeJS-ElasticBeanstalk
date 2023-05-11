@@ -1,13 +1,13 @@
+stages:
+  - build
+  - Preproduction
+
 image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
 
 variables:
   ARTIFACT_NAME: nodejs-demo-app1.zip
   APP_NAME: nodejs-demo-app
   ENV_DEV: Preproduction
-
-stages:
-  – Build
-  – Preproduction
 
 Build:
   stage: Build
@@ -17,7 +17,7 @@ Build:
     – zip -r $ARTIFACT_NAME public views app.js package.json
   artifacts:
     paths:
-      – $ARTIFACT_NAME
+    - $ARTIFACT_NAME
 
 Preproduction:
   stage: Preproduction
