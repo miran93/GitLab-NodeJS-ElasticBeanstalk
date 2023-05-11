@@ -21,6 +21,7 @@ Build:
 
 Preproduction:
   stage: Preproduction
+  script: |
     – aws s3 cp $ARTIFACT_NAME s3://$S3_BUCKET/$ARTIFACT_NAME
     – aws elasticbeanstalk create-application-version –application-name $APP_NAME –version-label v_$CI_COMMIT_SHORT_SHA –source-bundle S3Bucket=$S3_BUCKET,S3Key=$ARTIFACT_NAME
     – aws elasticbeanstalk update-environment –environment-name $ENV_DEV –version-label v_$CI_COMMIT_SHORT_SHA
