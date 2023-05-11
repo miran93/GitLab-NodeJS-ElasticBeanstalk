@@ -39,7 +39,7 @@ create_eb_version:
       --auto-create-application \
   only:
     refs:
-      - master
+      - main
 
 deploy_aws_eb:
   stage: run
