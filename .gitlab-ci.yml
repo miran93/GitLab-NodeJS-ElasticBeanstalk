@@ -53,4 +53,4 @@ deploy_aws_eb:
     eb deploy ${APP_NAME} --version ${AWS_VERSION_LABEL}
   only:
     refs:
-      - master
+      - main
