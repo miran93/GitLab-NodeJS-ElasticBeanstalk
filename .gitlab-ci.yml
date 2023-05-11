@@ -1,0 +1,20 @@
+image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
+
+variables:
+  ARTIFACT_NAME: nodejs-demo-app1.zip
+  APP_NAME: nodejs-demo-app
+  ENV_DEV: Nodejs-demo-app-env
+
+stages:
+  - Build
+  - Preproduction
+
+Build:
+  stage: Build
+  image: alpine:latest
+  script:
+    – apk add –update zip
+    – zip -r $ARTIFACT_NAME public views app.js package.json
+  artifacts:
+    paths:
+      - $ARTIFACT_NAME
