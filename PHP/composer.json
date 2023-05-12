@@ -1,0 +1,30 @@
+{
+  "name": "ismailatkurt/git-lab-awseb-deployment",
+  "description": "Sample PHP Project - Deployment to AWS Elastic Beanstalk with GitLab CI Pipelines",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ismail Atkurt",
+      "email": "ismail.atkurt@gmail.com"
+    }
+  ],
+  "config": {
+    "platform": {
+      "php": "7.4"
+    },
+    "bin-dir": "bin/"
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^7.4",
+    "ext-json": "*",
+    "slim/slim": "^4.5",
+    "slim/psr7": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "SamplePhpApp\\": "src/"
+    }
+  }
+}
